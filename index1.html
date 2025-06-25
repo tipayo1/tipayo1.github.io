@@ -1,161 +1,176 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="scroll-smooth" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>신입 AI 엔지니어 & 데이터 분석가 포트폴리오</title>
+  <title>홍길동 | AI 엔지니어 & 데이터 분석가 포트폴리오</title>
+  <meta name="description" content="신입 AI 엔지니어 & 데이터 분석가 홍길동의 포트폴리오 — 에이전트 파이프라인, RAG, 멀티 에이전트 등 학습 여정" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config for dark mode
+    tailwind.config = { darkMode: 'class' }
+  </script>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f6f8;
-      color: #333;
-      line-height: 1.6;
+    /* Progress bar keyframes */
+    @keyframes load {
+      0% { width: 0 }
+      100% { width: var(--progress) }
     }
-    header {
-      background: #283e4a;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
+    .progress-bar {
+      --progress: 0%;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.1rem;
-      opacity: 0.8;
-    }
-    nav {
-      background: #fff;
-      padding: 1rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav li {
-      margin: 0 1rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #283e4a;
-      font-weight: 600;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      margin-bottom: 1.5rem;
-      border-radius: 6px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    }
-    section h2 {
-      margin-top: 0;
-      color: #283e4a;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.5rem;
-    }
-    ul.skills {
-      list-style: none;
-      padding: 0;
-    }
-    ul.skills li {
-      margin: 0.5rem 0;
-      padding-left: 1.5rem;
-      position: relative;
-    }
-    ul.skills li:before {
-      content: '✔';
-      position: absolute;
-      left: 0;
-      color: #4caf50;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #777;
+    .progress-bar > div {
+      width: 0;
+      animation: load 1.5s ease-out forwards;
     }
   </style>
 </head>
-<body>
-
-  <header>
-    <h1>홍길동 포트폴리오</h1>
-    <p>신입 데이터 분석가 & AI 엔지니어를 향한 여정</p>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors">
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white dark:bg-gray-800 shadow-md z-20">
+    <div class="max-w-4xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-2xl font-bold">홍길동</h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-blue-500">소개</a>
+        <a href="#goals" class="hover:text-blue-500">목표</a>
+        <a href="#skills" class="hover:text-blue-500">기술</a>
+        <a href="#projects" class="hover:text-blue-500">프로젝트</a>
+        <a href="#contact" class="hover:text-blue-500">연락처</a>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 rounded bg-gray-200 dark:bg-gray-700">
+        🌗
+      </button>
+      <button id="menu-toggle" class="md:hidden p-2">
+        ☰
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden bg-white dark:bg-gray-800">
+      <nav class="flex flex-col space-y-2 p-4">
+        <a href="#about" class="hover:text-blue-500">소개</a>
+        <a href="#goals" class="hover:text-blue-500">목표</a>
+        <a href="#skills" class="hover:text-blue-500">기술</a>
+        <a href="#projects" class="hover:text-blue-500">프로젝트</a>
+        <a href="#contact" class="hover:text-blue-500">연락처</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#about">소개</a></li>
-      <li><a href="#goals">목표</a></li>
-      <li><a href="#skills">학습 항목</a></li>
-      <li><a href="#contact">연락처</a></li>
-    </ul>
-  </nav>
+  <main class="pt-24 max-w-4xl mx-auto space-y-12 px-4">
+    <!-- Hero -->
+    <section id="about" class="text-center space-y-4">
+      <h2 class="text-4xl font-extrabold">신입 AI 엔지니어 & 데이터 분석가</h2>
+      <p class="text-lg">에이전트 파이프라인을 향한 학습 여정</p>
+    </section>
 
-  <section id="about">
-    <h2>소개</h2>
-    <p>
-      안녕하세요! 신입 데이터 분석가 및 AI 엔지니어로 성장하기 위해 노력 중인 홍길동입니다.  
-      Python, SQL, 머신러닝 기초 지식을 기반으로, 에이전트 파이프라인과 AI 응용 분야 역량을 키우고자 합니다.
-    </p>
-  </section>
+    <!-- Goals -->
+    <section id="goals" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+      <h3 class="text-2xl font-semibold border-b pb-2 mb-4">내 목표</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li>에이전트 파이프라인 설계·구축·운영</li>
+        <li>안정적이고 확장 가능한 AI 시스템 개발</li>
+        <li>데이터 분석 및 시각화로 인사이트 도출</li>
+      </ul>
+    </section>
 
-  <section id="goals">
-    <h2>내 목표</h2>
-    <ul class="skills">
-      <li>에이전트 파이프라인 구축 및 운영</li>
-      <li>데이터 분석 및 시각화를 통한 인사이트 도출</li>
-      <li>안정적이고 확장 가능한 AI 시스템 설계</li>
-    </ul>
-  </section>
+    <!-- Skills with progress bars -->
+    <section id="skills" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+      <h3 class="text-2xl font-semibold border-b pb-2 mb-6">학습 및 습득 기술 · 개념</h3>
+      <div class="space-y-4">
+        <div>
+          <p class="mb-1">RAG (할루시네이션 최소화)</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:75%;">
+            <div class="h-full bg-blue-500 dark:bg-blue-400 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1">MCP (Multi-Channel Processing)</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:50%;">
+            <div class="h-full bg-green-500 dark:bg-green-400 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1">n8n 워크플로우 자동화</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:40%;">
+            <div class="h-full bg-yellow-500 dark:bg-yellow-400 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1">멀티 에이전트 시스템</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:30%;">
+            <div class="h-full bg-indigo-500 dark:bg-indigo-400 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1">온프레미스 에이전트 보안</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:25%;">
+            <div class="h-full bg-red-500 dark:bg-red-400 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1">바이트코딩 커서 사용법</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:20%;">
+            <div class="h-full bg-pink-500 dark:bg-pink-400 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1">Hugging Face & LangChain 실습</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:60%;">
+            <div class="h-full bg-teal-500 dark:bg-teal-400 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1">AI 뉴스 & 전문가 인사이트</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:45%;">
+            <div class="h-full bg-gray-500 dark:bg-gray-400 rounded"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="skills">
-    <h2>학습 및 습득할 기술 · 개념</h2>
-    <ul class="skills">
-      <li>할루시네이션 최소화를 위한 RAG</li>
-      <li>MCP (Multi-Channel Processing)</li>
-      <li>n8n 워크플로우 자동화</li>
-      <li>멀티 에이전트 시스템 디자인</li>
-      <li>회사 내부정보 보안을 위한 온프레미스 에이전트</li>
-      <li>바이트코딩을 위한 커서 사용법</li>
-      <li>허깅페이스 & 오픈소스 LLM, LangChain 실습</li>
-      <li>AI 관련 최신 기사 및 전문가 인사이트 구독</li>
-    </ul>
-  </section>
+    <!-- Projects -->
+    <section id="projects" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+      <h3 class="text-2xl font-semibold border-b pb-2 mb-4">진행 중 프로젝트</h3>
+      <ul class="space-y-3">
+        <li>🔍 RAG 기반 문서 검색 에이전트 프로토타입</li>
+        <li>⚙️ n8n + Python 연동 워크플로우 실험</li>
+        <li>🤗 Hugging Face Transformers 튜토리얼 따라하기</li>
+      </ul>
+    </section>
 
-  <section id="projects">
-    <h2>진행 중인 프로젝트</h2>
-    <p>
-      - RAG 기반 문서 검색 에이전트 프로토타입 개발 중<br/>
-      - n8n과 Python 연동 워크플로우 구축 실험<br/>
-      - Hugging Face Transformers 튜토리얼 따라하기
-    </p>
-  </section>
+    <!-- Contact -->
+    <section id="contact" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow text-center">
+      <h3 class="text-2xl font-semibold border-b pb-2 mb-4">연락처</h3>
+      <p>✉ honggildong@example.com</p>
+      <p>💼 <a href="https://github.com/honggildong" target="_blank" class="text-blue-500 hover:underline">github.com/honggildong</a></p>
+      <p>🔗 <a href="https://linkedin.com/in/honggildong" target="_blank" class="text-blue-500 hover:underline">linkedin.com/in/honggildong</a></p>
+    </section>
+  </main>
 
-  <section id="contact">
-    <h2>연락처</h2>
-    <p>
-      이메일: honggildong@example.com<br/>
-      GitHub: <a href="https://github.com/honggildong" target="_blank">github.com/honggildong</a><br/>
-      LinkedIn: <a href="https://linkedin.com/in/honggildong" target="_blank">linkedin.com/in/honggildong</a>
-    </p>
-  </section>
-
-  <footer>
+  <footer class="text-center py-6 text-sm text-gray-500 dark:text-gray-400">
     © 2025 홍길동. All rights reserved.
   </footer>
 
+  <script>
+    // Dark/light mode toggle
+    const btn = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    btn.addEventListener('click', () => {
+      if (html.classList.contains('dark')) {
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+    // Preserve theme on reload
+    if (localStorage.theme === 'dark') {
+      html.classList.add('dark');
+    }
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
