@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김시원 | 신입 데이터 분석가 포트폴리오</title>
+  <meta name="description" content="신입 데이터 분석가 김시원의 포트폴리오 — 에이전트 파이프라인, RAG, n8n, 멀티 에이전트 등 학습 여정">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+  <style>
+    @keyframes load { 0% { width: 0 } 100% { width: var(--progress) } }
+    .progress-bar { --progress: 0%; }
+    .progress-bar > div { width: 0; animation: load 1.2s ease-out forwards; }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors">
+  <!-- Header & Navbar -->
+  <header class="fixed w-full bg-white dark:bg-gray-800 shadow-md z-20">
+    <div class="max-w-4xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-2xl font-bold">김시원</h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-blue-500">소개</a>
+        <a href="#goals" class="hover:text-blue-500">목표</a>
+        <a href="#skills" class="hover:text-blue-500">기술</a>
+        <a href="#projects" class="hover:text-blue-500">프로젝트</a>
+        <a href="#contact" class="hover:text-blue-500">연락처</a>
+      </nav>
+      <div class="flex items-center space-x-2">
+        <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 rounded bg-gray-200 dark:bg-gray-700">🌗</button>
+        <button id="menu-toggle" class="md:hidden p-2">☰</button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden bg-white dark:bg-gray-800">
+      <nav class="flex flex-col space-y-2 p-4">
+        <a href="#about" class="hover:text-blue-500">소개</a>
+        <a href="#goals" class="hover:text-blue-500">목표</a>
+        <a href="#skills" class="hover:text-blue-500">기술</a>
+        <a href="#projects" class="hover:text-blue-500">프로젝트</a>
+        <a href="#contact" class="hover:text-blue-500">연락처</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-24 max-w-4xl mx-auto space-y-12 px-4">
+    <!-- Hero Section -->
+    <section id="about" class="text-center space-y-4">
+      <h2 class="text-4xl font-extrabold">신입 데이터 분석가</h2>
+      <p class="text-lg">에이전트 파이프라인 구축과 AI 응용에 도전하는 여정</p>
+    </section>
+
+    <!-- Goals -->
+    <section id="goals" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+      <h3 class="text-2xl font-semibold border-b pb-2 mb-4">내 목표</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li>에이전트 파이프라인 설계·구축·운영</li>
+        <li>안정적이고 확장 가능한 AI 시스템 개발</li>
+        <li>데이터 분석과 시각화로 인사이트 제공</li>
+      </ul>
+    </section>
+
+    <!-- Skills & Concepts -->
+    <section id="skills" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+      <h3 class="text-2xl font-semibold border-b pb-2 mb-6">학습 및 습득 기술 · 개념</h3>
+      <div class="space-y-5">
+        <div>
+          <p class="mb-1 font-medium">RAG (할루시네이션 최소화)</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:70%;">
+            <div class="h-full bg-blue-500 dark:bg-blue-400 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1 font-medium">MCP (Multi-Channel Processing)</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:50%;">
+            <div class="h-full bg-green-500 dark:bg-green-400 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1 font-medium">n8n 워크플로우 자동화</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:40%;">
+            <div class="h-full bg-yellow-500 dark:bg-yellow-400 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1 font-medium">멀티 에이전트 시스템</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:30%;">
+            <div class="h-full bg-indigo-500 dark:bg-indigo-400 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1 font-medium">온프레미스 에이전트 보안</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:25%;">
+            <div class="h-full bg-red-500 dark:bg-red-400 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1 font-medium">바이트코딩 커서 사용법</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:20%;">
+            <div class="h-full bg-pink-500 dark:bg-pink-400 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1 font-medium">Hugging Face & LangChain 실습</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:60%;">
+            <div class="h-full bg-teal-500 dark:bg-teal-400 rounded"></div>
+          </div>
+        </div>
+        <div>
+          <p class="mb-1 font-medium">AI 뉴스 & 전문가 인사이트</p>
+          <div class="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded overflow-hidden progress-bar" style="--progress:45%;">
+            <div class="h-full bg-gray-500 dark:bg-gray-400 rounded"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+      <h3 class="text-2xl font-semibold border-b pb-2 mb-4">진행 중 프로젝트</h3>
+      <ul class="space-y-3 list-inside list-decimal">
+        <li>🔍 RAG 기반 문서 검색 에이전트 프로토타입</li>
+        <li>⚙️ n8n + Python 연동 워크플로우 실험</li>
+        <li>🤗 Hugging Face Transformers 튜토리얼</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow text-center">
+      <h3 class="text-2xl font-semibold border-b pb-2 mb-4">연락처</h3>
+      <p>✉ kimsiwon@example.com</p>
+      <p>💼 <a href="https://github.com/kimsiwon" target="_blank" class="text-blue-500 hover:underline">github.com/kimsiwon</a></p>
+      <p>🔗 <a href="https://linkedin.com/in/kimsiwon" target="_blank" class="text-blue-500 hover:underline">linkedin.com/in/kimsiwon</a></p>
+    </section>
+  </main>
+
+  <footer class="text-center py-6 text-sm text-gray-500 dark:text-gray-400">
+    © 2025 김시원. All rights reserved.
+  </footer>
+
+  <script>
+    const htmlEl = document.documentElement;
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      htmlEl.classList.toggle('dark');
+      localStorage.theme = htmlEl.classList.contains('dark') ? 'dark' : 'light';
+    });
+    if (localStorage.theme === 'dark') htmlEl.classList.add('dark');
+
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
